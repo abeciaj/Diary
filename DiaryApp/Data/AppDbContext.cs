@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 
 namespace DiaryApp.Data
 {
@@ -7,5 +8,7 @@ namespace DiaryApp.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
+
+        public DbSet<Models.DiaryEntryModel> DiaryEntries { get; set; }
     }
 }
